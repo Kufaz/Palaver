@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://llhstovxa84m"]
+
+[ext_resource type="Script" uid="uid://p2ip8n3bwtks" path="res://OLD ui/ui_canvas.gd" id="1_mlixb"]
+[ext_resource type="PackedScene" uid="uid://dnfsi8p6ojve5" path="res://OLD ui/dialogue_ui.tscn" id="2_ep6yv"]
+[ext_resource type="PackedScene" uid="uid://dfh25gffvovc1" path="res://OLD ui/hud_ui.tscn" id="3_ep6yv"]
+
+[node name="UiCanvas" type="Control" unique_id=1221418923 node_paths=PackedStringArray("dialogueUi", "hudUi")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mlixb")
+dialogueUi = NodePath("DialogueUi")
+hudUi = NodePath("HudUi")
+
+[node name="DialogueUi" parent="." unique_id=1678154473 instance=ExtResource("2_ep6yv")]
+layout_mode = 1
+
+[node name="HudUi" parent="." unique_id=1651935775 instance=ExtResource("3_ep6yv")]
+layout_mode = 1

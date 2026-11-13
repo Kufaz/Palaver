@@ -1,0 +1,37 @@
+[gd_resource type="Theme" format=3 uid="uid://c5r5rhlyn1lpp"]
+
+[ext_resource type="FontFile" uid="uid://m2rqapxv308" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleNext-Bold.otf" id="1_n5lpc"]
+[ext_resource type="FontFile" uid="uid://cu7sfyrmtsvgs" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleNext-Medium.otf" id="1_s1244"]
+[ext_resource type="FontFile" uid="uid://2wcexjixtew8" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleNext-ExtraLight.otf" id="2_udrma"]
+[ext_resource type="FontFile" uid="uid://b7ulnwm1gptnp" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleNext-BoldItalic.otf" id="3_3m1ia"]
+[ext_resource type="FontFile" uid="uid://bie13rtna5pdj" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleNext-LightItalic.otf" id="4_007l3"]
+[ext_resource type="FontFile" uid="uid://dq1deq12qbl7c" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleMono-Light.otf" id="5_007l3"]
+[ext_resource type="FontFile" uid="uid://cknn6qnkc1cw0" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleNext-Light.otf" id="5_whtca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yxbs"]
+bg_color = Color(0, 0, 0, 0.2901961)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 4
+
+[resource]
+default_font = ExtResource("1_s1244")
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_n5lpc")
+HBoxContainer/constants/separation = 18
+Label/fonts/font = ExtResource("2_udrma")
+LineEdit/fonts/font = ExtResource("2_udrma")
+Panel/styles/panel = SubResource("StyleBoxFlat_6yxbs")
+RichTextLabel/font_sizes/bold_font_size = 26
+RichTextLabel/font_sizes/bold_italics_font_size = 26
+RichTextLabel/font_sizes/italics_font_size = 26
+RichTextLabel/font_sizes/mono_font_size = 26
+RichTextLabel/font_sizes/normal_font_size = 26
+RichTextLabel/fonts/bold_font = ExtResource("1_n5lpc")
+RichTextLabel/fonts/bold_italics_font = ExtResource("3_3m1ia")
+RichTextLabel/fonts/italics_font = ExtResource("4_007l3")
+RichTextLabel/fonts/mono_font = ExtResource("5_007l3")
+RichTextLabel/fonts/normal_font = ExtResource("5_whtca")
+TextEdit/fonts/font = ExtResource("2_udrma")

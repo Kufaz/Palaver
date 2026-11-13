@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dfh25gffvovc1"]
+
+[ext_resource type="Script" uid="uid://46ispp5dbmrs" path="res://OLD ui/hud_ui.gd" id="1_rbyyf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym2gw"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="HudUi" type="Control" unique_id=1651935775 node_paths=PackedStringArray("emberBar", "solidEmberLable")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbyyf")
+emberBar = NodePath("EmberBar")
+solidEmberLable = NodePath("PanelContainer/SolidEmber")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=346686655]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -294.0
+offset_top = -126.0
+offset_right = -142.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ym2gw")
+
+[node name="SolidEmber" type="RichTextLabel" parent="PanelContainer" unique_id=807787547]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "0"
+
+[node name="EmberBar" type="ProgressBar" parent="." unique_id=833777405]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -539.5
+offset_top = -99.0
+offset_right = 539.5
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0

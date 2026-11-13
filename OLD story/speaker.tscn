@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cf84jwee1jyd2"]
+
+[ext_resource type="PackedScene" path="res://interactables/interactable.tscn" id="1_u4p21"]
+[ext_resource type="Script" uid="uid://feo6yw21wdt7" path="res://OLD story/speaker.gd" id="2_40f1c"]
+
+[node name="Interactable" unique_id=601736629 instance=ExtResource("1_u4p21")]
+script = ExtResource("2_40f1c")
+dialogueScript = null

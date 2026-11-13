@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueScript" format=3 uid="uid://cf1ef0ojvlncx"]
+
+[ext_resource type="Script" uid="uid://vgdyd5eb0pgd" path="res://OLD story/dialogue_script.gd" id="1_302ao"]
+
+[resource]
+script = ExtResource("1_302ao")
+text = Array[String](["You open the mailbox...", "A cat's paw swipes at you. You quickly close the mailbox."])
+metadata/_custom_type_script = "uid://vgdyd5eb0pgd"
