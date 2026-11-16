@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://c5r5rhlyn1lpp" path="res://palaver/dialogue_ui/palaver_theme.tres" id="1_grgc4"]
 [ext_resource type="Script" uid="uid://bucyyo4npuf2b" path="res://palaver/dialogue_ui/animated_text.gd" id="2_bh2ae"]
 [ext_resource type="Texture2D" uid="uid://j4a2b2axey7" path="res://palaver/dialogue_ui/speaker_image_placeholder.png" id="2_grgc4"]
+[ext_resource type="Script" uid="uid://c8sa0mvg33y6i" path="res://palaver/dialogue_ui/dialogue_choice_buttons.gd" id="4_t1mci"]
 
 [node name="DialogueUi" type="Control" unique_id=2019201439]
 layout_mode = 3
@@ -59,44 +60,29 @@ text = "Text"
 scroll_active = false
 script = ExtResource("2_bh2ae")
 
-[node name="ChoiceBar" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1854769974]
+[node name="ChoiceBar" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1854769974 node_paths=PackedStringArray("continueGraphic", "closeGraphic", "choiseButtonTemplate")]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 2
+script = ExtResource("4_t1mci")
+continueGraphic = NodePath("ContinueButton")
+closeGraphic = NodePath("CloseButton")
+choiseButtonTemplate = NodePath("ChoiceButton")
 
 [node name="ContinueButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1971365446]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "..."
 flat = true
 
 [node name="CloseButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=150028072]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "×"
 flat = true
 
-[node name="ChoiceButton1" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1696951112]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Choice"
-
-[node name="ChoiceButton2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=984015643]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Choice"
-
-[node name="ChoiceButton3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=593081356]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Choice"
-
-[node name="ChoiceButton4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1170486787]
-visible = false
+[node name="ChoiceButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1696951112]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Choice"
