@@ -28,7 +28,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 40
+theme_override_constants/margin_top = 44
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
@@ -51,7 +51,7 @@ theme_override_constants/margin_right = 22
 theme_override_constants/margin_bottom = 0
 
 [node name="DialogueText" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=778526147]
-custom_minimum_size = Vector2(472, 120)
+custom_minimum_size = Vector2(468, 120)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -68,12 +68,14 @@ alignment = 2
 [node name="ContinueButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1971365446]
 visible = false
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "..."
 flat = true
 
 [node name="CloseButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=150028072]
 visible = false
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "×"
 flat = true
 
