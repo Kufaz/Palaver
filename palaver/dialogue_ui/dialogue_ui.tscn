@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cvnrxejoo4efx"]
 
 [ext_resource type="Theme" uid="uid://c5r5rhlyn1lpp" path="res://palaver/dialogue_ui/palaver_theme.tres" id="1_grgc4"]
-[ext_resource type="Texture2D" uid="uid://dm7gvdnpe6yv" path="res://icon.svg" id="1_lt16x"]
 [ext_resource type="Script" uid="uid://bucyyo4npuf2b" path="res://palaver/dialogue_ui/animated_text.gd" id="2_bh2ae"]
+[ext_resource type="Texture2D" uid="uid://j4a2b2axey7" path="res://palaver/dialogue_ui/speaker_image_placeholder.png" id="2_grgc4"]
 
 [node name="DialogueUi" type="Control" unique_id=2019201439]
 layout_mode = 3
@@ -28,7 +28,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
@@ -40,8 +40,8 @@ theme_override_constants/separation = 18
 
 [node name="SpeakerImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2104884001]
 layout_mode = 2
-texture = ExtResource("1_lt16x")
-expand_mode = 4
+texture = ExtResource("2_grgc4")
+stretch_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1071243280]
 layout_mode = 2
@@ -51,7 +51,7 @@ theme_override_constants/margin_right = 22
 theme_override_constants/margin_bottom = 0
 
 [node name="DialogueText" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=778526147]
-custom_minimum_size = Vector2(500, 120)
+custom_minimum_size = Vector2(472, 120)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -62,20 +62,39 @@ script = ExtResource("2_bh2ae")
 [node name="ChoiceBar" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1854769974]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 16
 alignment = 2
 
 [node name="ContinueButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1971365446]
+visible = false
 layout_mode = 2
 text = "..."
 flat = true
 
 [node name="CloseButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=150028072]
+visible = false
 layout_mode = 2
 text = "×"
 flat = true
 
-[node name="ChoiceButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1696951112]
+[node name="ChoiceButton1" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1696951112]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Choice"
+
+[node name="ChoiceButton2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=984015643]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Choice"
+
+[node name="ChoiceButton3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=593081356]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Choice"
+
+[node name="ChoiceButton4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ChoiceBar" unique_id=1170486787]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Choice"

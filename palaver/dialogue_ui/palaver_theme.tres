@@ -8,6 +8,26 @@
 [ext_resource type="FontFile" uid="uid://dq1deq12qbl7c" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleMono-Light.otf" id="5_007l3"]
 [ext_resource type="FontFile" uid="uid://cknn6qnkc1cw0" path="res://palaver/dialogue_ui/atkinson_hyperlegible_next/AtkinsonHyperlegibleNext-Light.otf" id="5_whtca"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_007l3"]
+bg_color = Color(0.16470589, 0.32156864, 0.47843137, 1)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16470589, 0.32156864, 0.47843137, 1)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whtca"]
+bg_color = Color(0.16470589, 0.32156864, 0.47843137, 1)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yxbs"]
 bg_color = Color(0, 0, 0, 0.2901961)
 corner_radius_top_left = 8
@@ -16,14 +36,38 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 corner_detail = 4
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_natot"]
+bg_color = Color(0.972549, 0.972549, 0.9098039, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.10980392, 0.10980392, 0.1882353, 1)
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
 [resource]
 default_font = ExtResource("1_s1244")
-Button/font_sizes/font_size = 30
+Button/colors/font_color = Color(0.16470589, 0.32156864, 0.47843137, 1)
+Button/colors/font_focus_color = Color(0.972549, 0.972549, 0.9098039, 1)
+Button/colors/font_hover_color = Color(0.972549, 0.972549, 0.9098039, 1)
+Button/colors/font_pressed_color = Color(0.972549, 0.972549, 0.9098039, 1)
+Button/font_sizes/font_size = 22
 Button/fonts/font = ExtResource("1_n5lpc")
+Button/styles/disabled = SubResource("StyleBoxFlat_007l3")
+Button/styles/focus = SubResource("StyleBoxFlat_whtca")
+Button/styles/hover = SubResource("StyleBoxFlat_whtca")
+Button/styles/normal = SubResource("StyleBoxFlat_007l3")
+Button/styles/pressed = SubResource("StyleBoxFlat_whtca")
 HBoxContainer/constants/separation = 18
 Label/fonts/font = ExtResource("2_udrma")
 LineEdit/fonts/font = ExtResource("2_udrma")
 Panel/styles/panel = SubResource("StyleBoxFlat_6yxbs")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_natot")
+RichTextLabel/colors/default_color = Color(0.10980392, 0.10980392, 0.1882353, 1)
+RichTextLabel/colors/font_outline_color = Color(0.972549, 0.972549, 0.9098039, 1)
 RichTextLabel/font_sizes/bold_font_size = 26
 RichTextLabel/font_sizes/bold_italics_font_size = 26
 RichTextLabel/font_sizes/italics_font_size = 26
